@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #f5f7fa;
+  color: #1a1a1a;
+  scroll-behavior: smooth;
+}
+
+/* ===== Background Gradient Animation ===== */
+.modern-background {
+  background: linear-gradient(270deg, #6a11cb, #2575fc, #000000);
+  background-size: 600% 600%;
+  animation: gradientMove 15s ease infinite;
+  color: #fff;
+  min-height: 100vh;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* ===== Animations ===== */
+.fade-in {
+  animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Custom Components ===== */
+.text-glow {
+  color: #00bcd4;
+  text-shadow: 0 0 10px rgba(0, 188, 212, 0.6);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+}
+
+.footer-section {
+  background-color: #212529;
+}
+
+.footer-icon {
+  font-size: 1.6rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Hover effect untuk kartu portofolio */
+.hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 188, 212, 0.3);
+}
+
+.profile-photo img {
+  box-shadow: 0 0 15px rgba(0, 183, 255, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-photo img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 183, 255, 0.8);
+}
+
+button,
+.btn {
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease;
+}
+
+.btn-info {
+  background-color: #00bfff !important;
+  border: none !important;
+}
+
+.btn-info:hover {
+  background-color: #009fdd !important;
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.6);
+}
+
+.btn-dark:hover {
+  background-color: #2a2a2a !important;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.contact-section {
+  background: linear-gradient(to top, #e3f2fd, #f8fbff);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  transition: all 0.4s ease;
+}
+
+.glass-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(0, 183, 255, 0.4);
+}
+
+a {
+  color: #00aaff;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #007acc;
+  text-decoration: underline;
+}
+
+.footer-section {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: #fff;
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.footer-section p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.footer-icon {
+  font-size: 1.6rem;
+  color: #00bfff;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.footer-icon:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+/* ===== Responsif ===== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .profile-photo img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .glass-card {
+    margin: 0 10px;
+  }
+}
